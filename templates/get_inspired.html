@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}All Art in Outer Space Projects{% endblock %}
+
+{% block body %}
+  <h1>GET INSPIRED! View Art in Outer Space Projects!</h1>
+
+  <ul>
+    {% for project in projects %}
+      <li>
+        <a href="/get_inspired/{{ project.project_id }}">
+            {{ project.title }}
+          <!-- <iframe width="560" height="315" src="{{video.url}}" frameborder="0" allowfullscreen></iframe>
+          </iframe> -->
+        <!-- <h1>{{ project.title }}</h1> -->
+        <!-- <p>
+        {{ project.description }}
+        </p> -->
+
+        <!-- {% if session.get('user_email') %}
+        <h2>Rank this project</h2>
+            <form action="/get_inspired/{{ project.project_id }}/reviews" method="POST"> -->
+
+            <!-- <form action="/get_inspired" method="POST"> -->
+        <!-- <p>
+            Ranking:
+            <select name="ranking">
+            <option value="">Select ranking</option>
+            {% for num in range(11) %}
+                <option value="{{ num }}">{{ num }}</option>
+            {% endfor %}
+            </select>
+        </p>
+        <p><input type="submit"></p>
+        </form>
+        {% endif %} -->
+        <!-- </a> -->
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

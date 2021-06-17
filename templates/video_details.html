@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ video.title }} - Details{% endblock %}
+
+{% block body %}
+<h1>{{ video.title }}</h1>
+<iframe width="560" height="315" src="{{video.url}}" frameborder="0" allowfullscreen></iframe>
+</iframe>
+
+<p>
+  {{ video.description }}
+</p>
+
+{% if session.get('user_email') %}
+<h2>Rank this video</h2>
+<form action="/get_connected/{{ video.video_id }}/rankings" method="POST">
+  <p>
+    Ranking:
+    <select name="ranking">
+      <option value="">Select ranking</option>
+      {% for num in range(11) %}
+        <option value="{{ num }}">{{ num }}</option>
+      {% endfor %}
+    </select>
+  </p>
+  <p><input type="submit"></p>
+</form>
+{% endif %}
+
+<!-- <img src=" video.creator "> -->
+{% endblock %}

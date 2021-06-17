@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}All Videos{% endblock %}
+
+{% block body %}
+  <h1>All Videos</h1>
+
+  <ul>
+    {% for video in videos %}
+      <li>
+        <a href="/videos/{{ video.video_id }}">
+          {{ video.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
