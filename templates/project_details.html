@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ project.project_title }} - Details{% endblock %}
+
+
+{% block body %}
+<div>
+    <h1>{{ project.project_title }}</h1>
+</div>
+
+<div>
+    <p>
+        {{ project.artist_name }}
+    </p>
+</div>
+
+<div>
+    <p>
+        {{ project.description }}
+    </p>
+</div>
+
+<div>
+    <p>
+        <img src="{{ project.img }}" width=50% height=auto>
+    </p>
+</div>   
+
+
+
+{% if session.get('user_email') %}
+<h2>Comment on this Project</h2>
+<form action="/get_inspired/{{ project.project_id }}/comments" method="POST">
+  <p>
+
+      <form>
+        <div>
+            <p>
+              <label for="comment">Enter your comment:</label>
+            </p>
+            <textarea name="comment" id="comment"></textarea>
+          </div>
+          <input type="submit">
+        </form>
+{% endif %}
+
+{% endblock %}

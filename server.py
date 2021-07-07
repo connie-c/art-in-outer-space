@@ -36,22 +36,23 @@ def show_video(video_id):
 
     return render_template("video_details.html", video=video)
 
-# @app.route("/get_inspired")
-# def all_projects():
-#     """View all art in outer space projects."""
 
-#     projects = crud.get_projects()
+@app.route("/get_inspired")
+def all_projects():
+    """View all art in outer space projects."""
 
-#     return render_template("get_inspired.html", projects=projects)
+    projects = crud.get_projects_from_database()
+
+    return render_template("get_inspired.html", projects=projects)
 
 
-# @app.route("/get_projects/<project_id>")
-# def show_project(project_id):
-#     """Show details on a particular project."""
+@app.route("/get_inspired/<project_id>")
+def show_project(project_id):
+    """Show details on a particular project."""
 
-#     video = crud.get_project_by_id(project_id)
+    project = crud.get_project_by_id(project_id)
 
-#     return render_template("project_details.html", project=project)
+    return render_template("project_details.html", project=project)
 
 # @app.route("/users")
 # def all_users():
@@ -107,11 +108,11 @@ def process_login():
 
 @app.route("/get_connected/<video_id>/reviews", methods=["POST"])
 # @app.route("/get_connected", methods=["POST"])
-def create_review_view(video_id):
-    """Create a new review for video."""
+def create_review(video_id):
+    """Create a new rating for video."""
 
     logged_in_email = session.get("user_email")
-    review_ranking = request.form.get("review")
+    review_ranking = request.form.get("ranking")
 
     if logged_in_email is None:
         flash("You must log in to review a video.")
@@ -125,10 +126,31 @@ def create_review_view(video_id):
 
         flash(f"You ranked this video {review_ranking} out of 10.")
 
-    return "Success"
-    # return redirect(f"/get_connected/{video_id}")
-    # return redirect(f"/get_connected")
 
+    # return redirect(f"/get_connected/{video_id}")
+    return render_template("end.html", user=user, video=video, review_ranking=review_ranking)
+
+
+@app.route("/get_inspired/<project_id>/comments", methods=["POST"])
+def create_comment(project_id):
+    """Create a new comment for art project."""
+
+    logged_in_email = session.get("user_email")
+    project_comment = request.form.get("comment")
+
+    if logged_in_email is None:
+        flash("You must log in to comment on an art project.")
+    elif not project_comment:
+        flash("Error: you didn't comment on an art project.")
+    else:
+        user = crud.get_user_by_email(logged_in_email)
+        project = crud.get_project_by_id(project_id)
+
+        crud.create_comment(user, project, project_comment)
+
+        flash(f"You commented on this project, thanks!")
+
+    return render_template("end.html", user=user, project=project, project_comment=project_comment)
 
 if __name__ == "__main__":
     connect_to_db(app)

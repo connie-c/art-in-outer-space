@@ -1,7 +1,8 @@
 """CRUD operations."""
 
-from model import db, User, Review, Video, connect_to_db
+from model import db, User, Review, Video, Project, Comment, connect_to_db
 from playlist import Videos  # rename to youtube_videos_list
+from projects import Projects
 
 def create_user(email, password):
     """Create and return a new user."""
@@ -85,15 +86,63 @@ def get_video_by_id(video_id):
     return Video.query.get(video_id)
 
 
-def create_review(user, ranking, video_id):
-    """Create and return a new ranking."""
+def create_review(user, video, ranking):
+    """Create a new ranking and add to the database."""
 
-    ranking = Review(user=user, ranking=ranking, video_id=video_id)
+    ranking = Review(user=user, video=video, ranking=ranking)
 
     db.session.add(ranking)
     db.session.commit()
 
     return ranking
+
+
+"""get_inspired art project portion"""
+
+def create_project(project_title, artist_name, description, url, img, project_id):
+    """Create and return a new art project, and add to database"""
+
+    project = Project(
+        project_title=project_title,
+        artist_name=artist_name,
+        description=description,
+        url=url,
+        img=img,
+        project_id=project_id
+    )
+    db.session.add(project)
+    db.session.commit()
+
+    return project
+
+
+# def get_project_by_id(project_id):
+#     """Return a project by primary key."""
+#     print(project_id)
+#     return get_project_by_id(project_id)
+
+
+def get_projects_from_database():
+    """Return all projects from database."""
+    print('get_projects_from_database')
+    return Project.query.all()
+
+
+def get_project_by_id(project_id):
+    """Return a project by primary key."""
+
+    return Project.query.get(project_id)
+
+
+def create_comment(user, project, comment):
+    """Create and return a new comment."""
+
+    comment = Comment(user=user, project=project, comment=comment)
+
+    db.session.add(comment)
+    db.session.commit()
+
+    return comment
 
 
 if __name__ == "__main__":

@@ -5,21 +5,19 @@ import json
 from random import choice, randint
 from datetime import datetime
 from playlist import Videos
+from projects import Projects
 
 import crud 
 import model
 import server
 import playlist
+import projects
 
 os.system("dropdb reviews")
 os.system("createdb reviews")
 
 model.connect_to_db(server.app)
 model.db.create_all()
-
-# Load movie data from JSON file
-# with open("data/videos.json") as f:
-#     video_data = json.loads(f.read())
 
 
 # Create videos from YouTube API
@@ -35,9 +33,26 @@ for video in Videos:
         video["url"],
         video["video_id"]
     )
-    print(video['video_id'])
+    # print(video['video_id'])
 
     db_video = crud.create_video(title, description, url, video_id)
+
+# Create projects from Projects dictionary
+projects_in_db = Projects
+
+for project in Projects:
+
+    project_title, artist_name, description, url, img, project_id = (
+        project["project_title"],
+        project["description"],
+        project["artist_name"],
+        project["url"],
+        project["img"],
+        project["project_id"]
+    )
+    print(project['project_id'])
+
+    db_project = crud.create_project(project_title, description, artist_name, url, img, project_id)
 
 
 #     video = Videos
@@ -49,7 +64,7 @@ for video in Videos:
     # db_movie = crud.create_video(title, description, date, creator, url)
     # videos_in_db.append(db_video)
 
-# Create 10 users; each user will make 10 ratings
+# Create 10 users; each user will make 10 review rankings
 for n in range(10):
     email = f"user{n}@test.com"  # Voila! A unique email!
     password = "test"

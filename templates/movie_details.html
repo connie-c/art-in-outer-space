@@ -11,7 +11,8 @@
 
 {% if session.get('user_email') %}
 <h2>Rank this video</h2>
-<form action="/videos/{{ video.video_id }}/rankings" method="POST">
+<form action="/end" method="POST">
+<!-- <form action="/videos/{{ video.video_id }}/reviews" method="POST"> -->
   <p>
     Ranking:
     <select name="ranking">
@@ -25,5 +26,5 @@
 </form>
 {% endif %}
 
-<img src="{{ video.creator }}">
+<!-- <img src="{{ video.creator }}"> -->
 {% endblock %}

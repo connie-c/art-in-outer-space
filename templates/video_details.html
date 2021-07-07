@@ -13,11 +13,12 @@
 
 {% if session.get('user_email') %}
 <h2>Rank this video</h2>
-<form action="/get_connected/{{ video.video_id }}/rankings" method="POST">
+<form action="/get_connected/<video_id>/reviews" method="POST">
+<!-- <form action="/get_connected/{{ video.video_id }}/reviews" method="POST"> -->
   <p>
     Ranking:
     <select name="ranking">
-      <option value="">Select ranking</option>
+      <option value="">Select ranking (ZERO is THE BEST! 10 is THE WORST!)</option>
       {% for num in range(11) %}
         <option value="{{ num }}">{{ num }}</option>
       {% endfor %}
