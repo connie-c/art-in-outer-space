@@ -3,10 +3,9 @@ from pprint import pprint
 from googleapiclient.discovery import build
 
 api_key = os.environ.get('YOUTUBE_API_KEY')
-
 youtube = build('youtube', 'v3', developerKey=api_key)
-
 playlist_id = os.environ.get('YOUTUBE_PLAYLIST_KEY')
+
 
 Videos = []
 

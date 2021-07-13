@@ -1,7 +1,8 @@
-"""Server for movie ratings app."""
+"""Server for art in outer space app."""
 
-from flask import Flask, render_template, request, flash, session, redirect
-from model import connect_to_db
+from flask import Flask,  jsonify, render_template, request, flash, session, redirect
+from model import db, Artpiece, connect_to_db
+from time import sleep
 import crud
 import playlist
 
@@ -9,6 +10,7 @@ from jinja2 import StrictUndefined
 
 app = Flask(__name__)
 app.secret_key = "dev"
+app.secret_key = "secret"
 app.jinja_env.undefined = StrictUndefined
 
 
@@ -151,6 +153,34 @@ def create_comment(project_id):
         flash(f"You commented on this project, thanks!")
 
     return render_template("end.html", user=user, project=project, project_comment=project_comment)
+
+
+@app.route('/<path>')
+def route(path):
+
+    return render_template('homepage.html')
+
+
+@app.route('/<path>/<id>')
+def nested_route(path, id):
+
+    return render_template('homepage.html')
+
+
+@app.route('/api/artpieces')
+def get_artpieces():
+    sleep(2) # simulate slow connections
+    artpieces = Artpiece.query.all()
+    return jsonify({artpiece.artpiece_id: artpiece.to_dict() for artpiece in artpieces})
+    # return jsonify(artpieces)
+
+@app.route('/api/artpiece/<artpiece_id>')
+def get_artpiece(artpiece_id):
+
+    artpiece = Artpiece.query.get(artpiece_id)
+    return jsonify(artpiece.to_dict())
+    # return jsonify(artpiece)
+
 
 if __name__ == "__main__":
     connect_to_db(app)

@@ -47,6 +47,17 @@ Projects = [
 
 ]
 
+Artpieces = [
+    {
+        "artpiece_id": "001",
+        "name": "Chevy 1977 van Ophelia on the Moon", 
+        "price": "2",
+        "image_url": "https://lh3.googleusercontent.com/-6xpUke0A_9w/YOx9txe6ZdI/AAAAAAAAAZ8/Z2bdq6JdWXgnbSlzTIe2jkJbH4-6R-VMACNcBGAsYHQ/w640-h480/D50E9725-AE0E-41BD-9DBA-0B6ECEB9E646_1_105_c.jpeg",
+        "color": "none",
+        "seedless": "t"
+    }
+]
+
 # import requests
 # from bs4 import BeautifulSoup
 

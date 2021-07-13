@@ -1,8 +1,9 @@
 """CRUD operations."""
 
-from model import db, User, Review, Video, Project, Comment, connect_to_db
+from model import db, User, Review, Video, Project, Comment, Artpiece, connect_to_db
 from playlist import Videos  # rename to youtube_videos_list
 from projects import Projects
+from artpieces import Artpieces
 
 def create_user(email, password):
     """Create and return a new user."""
@@ -143,6 +144,36 @@ def create_comment(user, project, comment):
     db.session.commit()
 
     return comment
+
+
+"""get_funded art piece portion"""
+
+def create_artpiece(artpiece_id, name, price, image_url, color):
+    """Create and return a new art piece, and add to database"""
+
+    artpiece = Artpiece(
+        artpiece_id=artpiece_id,
+        name=name,
+        price=price,
+        image_url=image_url,
+        color=color
+    )
+    db.session.add(artpiece)
+    db.session.commit()
+
+    return artpiece
+
+
+def get_artpieces_from_database():
+    """Return all art pieces from database."""
+    print('get_artpieces_from_database')
+    return Artpiece.query.all()
+
+
+def get_artpiece_by_id(artpiece_id):
+    """Return a artpiece by primary key."""
+
+    return Artpiece.query.get(artpiece_id)
 
 
 if __name__ == "__main__":
