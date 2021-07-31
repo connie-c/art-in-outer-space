@@ -105,9 +105,9 @@ class Artpiece(db.Model):
     image_url = db.Column(db.String, nullable=False)
     color = db.Column(db.String, nullable=False)
 
-    # artpiece_type_id = db.Column(db.Integer, db.ForeignKey('types.type_id'))
+    artpiece_type_id = db.Column(db.Integer, db.ForeignKey('types.type_id'))
 
-    # artpiece_type = db.relationship('ArtpieceType', backref='artpieces')
+    artpiece_type = db.relationship('ArtpieceType', backref='artpieces')
 
     def __repr__(self):
         return f"<Artpiece artpiece_id={self.artpiece_id} name={self.name} price={self.price} image_url={self.image_url} color={self.color} >"
@@ -121,20 +121,20 @@ class Artpiece(db.Model):
                 }
 
 
-# class ArtpieceType(db.Model):
-#     """Type of art piece."""
+class ArtpieceType(db.Model):
+    """Type of art piece."""
 
-#     __tablename__ = 'types'
+    __tablename__ = 'types'
 
-#     type_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-#     name = db.Column(db.String, nullable=False)
+    type_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    name = db.Column(db.String, nullable=False)
 
-#     def __repr__(self):
-#         return f'<ArtpieceType name={self.name}>'
+    def __repr__(self):
+        return f'<ArtpieceType name={self.name}>'
 
-    # def to_dict(self):
-    #     return {'type_id': self.type_id,
-    #             'name': self.name}
+    def to_dict(self):
+        return {'type_id': self.type_id,
+                'name': self.name}
 
 
 def connect_to_db(flask_app, db_uri="postgresql:///reviews", echo=True):

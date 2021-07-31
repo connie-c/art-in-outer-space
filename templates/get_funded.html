@@ -4,16 +4,34 @@
 {% block body %}
   <h1>GET FUNDED! Submit your application to get funded for your own Art in Outer Space Projects!</h1>
 
+  <div id="image-container">
+    <div id="form-container">
   <ul>
-    {% for project in projects %}
-      <li>
-        <a href="/get_inspired/{{ project.project_id }}">
-            {{ project.project_title }}
-        </a>
-        <p>
-        <img src="{{ project.img }}" width=50% height=auto>
-        </p>
-      </li>
-    {% endfor %}
+    <form>
+      <label>Art Application Name</label>
+      <p>
+      <input type="text" name="art-application-name">
+      </p>
+    </form>
+    <form>
+      <label>Tell us about yourself:</label>
+      <p>
+      <textarea name="about-me"></textarea>
+      </p>
+    </form>
+    <form>
+      <label>Tell us about your art project idea:</label>
+      <p>
+      <textarea name="about-me"></textarea>
+    </p>
+    </form>
+    <form>
+      <p>
+      <input type="submit">
+      </p>
+    </form>
+  </div>
+</div>
+
   </ul>
 {% endblock %}

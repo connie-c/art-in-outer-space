@@ -67,7 +67,8 @@ for n in range(10):
         random_video = choice(videos_in_db)
         ranking = randint(1, 10)
 
-        crud.create_review(user, ranking, video_id)
+        crud.create_review(user, video_id, ranking)
+        # crud.create_review(user, video, ranking)
 
 # Create artpieces from Artpieces dictionary
 artpieces_in_db = Artpieces
@@ -83,7 +84,7 @@ for artpiece in Artpieces:
     )
     print(artpiece['artpiece_id'])
 
-    db_project = crud.create_artpiece(artpiece_id, name, price, image_url, color)
+    db_artpiece = crud.create_artpiece(artpiece_id, name, price, image_url, color)
 
 
 

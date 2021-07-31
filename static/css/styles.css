@@ -1,10 +1,30 @@
+.right-text-align {
+  text-align:right;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 25px;
+}
+
+.left_margin {
+  margin-left: 25px;
+}
+
+.c-showSP {
+  height: 2000px;
+  margin-left: 50px;
+}
+
 .artpiece-card {
-  max-width: 23%;
+  max-width: 100%;
   margin: 0.5rem;
 }
 
 .artpiece-card h5 {
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 #funding .filters {
@@ -36,10 +56,67 @@
   from {
     transform: scale(1);
   }
-  50% {
+  100% {
     transform: scale(0.6);
   }
   to {
     transform: scale(1);
   }
 }
+
+#image-container {
+  background: url("http://printmeposter.com/blog/wp-content/uploads/2016/10/A-NASA-Poster.jpg");
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  min-height: flex;
+}
+#form-container {
+  display: flex;
+  justify-content: left;
+  background-size: cover;
+  margin-left: 25px;
+  width: 500px;
+  height: 400px;
+}
+
+#login-form-container {
+  background color: white;
+  margin-left: 25px;
+  margin-top: 100px;
+  width: 500px;
+  height: 400px;
+  top: 25%;
+  position: relative;
+  transform: translateY(-50%);
+  text-align:left;
+  padding: 70px;
+  width:50%;
+  right:0;left:0;
+  margin:auto;
+  height:400px;
+}
+
+.white-panel{
+  background-color: rgba(255,255, 255, 1);
+  height:500px;
+  position:absolute;
+  top:-50px;
+  width:25%;
+  right:calc(50% - 50px);
+  transition:.3s ease-in-out;
+  z-index:0;
+  box-shadow: 0 0 15px 9px #00000096;
+
+#create-account-form-container {
+  background-color: aquamarine;
+  top:-50px;
+  width:30%;
+  padding:0 5px;
+  top:20%;
+  right:25px;
+  position:absolute;
+  text-align:right;
+}
+
+

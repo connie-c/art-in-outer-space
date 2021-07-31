@@ -2,38 +2,18 @@
 {% block title %}All Videos{% endblock %}
 
 {% block body %}
-  <h1>GET CONNECTED! All Dear Moon Round 3 Applicant Videos</h1>
+  <h1 class="left_margin">GET CONNECTED!</h1>
+  <div id="mainVisual">
+    <img class="c-showSP" src="https://dearmoon.earth/img/index/mainVisual_sp_langEN.jpg">
+  </div>
 
-  <ul>
+  <h2 class="left_margin">View dearMoon round three applicant videos</h2>
+  <ul class="no-bullets">
     {% for video in videos %}
       <li>
         <a href="/get_connected/{{ video.video_id }}">
             {{ video.title }}
-          <!-- <iframe width="560" height="315" src="{{video.url}}" frameborder="0" allowfullscreen></iframe>
-          </iframe> -->
-        <!-- <h1>{{ video.title }}</h1> -->
-        <!-- <p>
-        {{ video.description }}
-        </p> -->
 
-        <!-- {% if session.get('user_email') %}
-        <h2>Rank this video</h2>
-            <form action="/get_connected/{{ video.video_id }}/reviews" method="POST"> -->
-
-            <!-- <form action="/get_connected" method="POST"> -->
-        <!-- <p>
-            Ranking:
-            <select name="ranking">
-            <option value="">Select ranking</option>
-            {% for num in range(11) %}
-                <option value="{{ num }}">{{ num }}</option>
-            {% endfor %}
-            </select>
-        </p>
-        <p><input type="submit"></p>
-        </form>
-        {% endif %} -->
-        <!-- </a> -->
       </li>
     {% endfor %}
   </ul>

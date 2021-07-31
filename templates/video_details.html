@@ -4,18 +4,17 @@
 
 {% block body %}
 <h1>{{ video.title }}</h1>
-<iframe width="560" height="315" src="{{video.url}}" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="{{video.url}}" frameborder="0" allowfullscreen></iframe>
 </iframe>
 
-<p>
+<p class="left_margin">
   {{ video.description }}
 </p>
 
 {% if session.get('user_email') %}
-<h2>Rank this video</h2>
-<form action="/get_connected/<video_id>/reviews" method="POST">
-<!-- <form action="/get_connected/{{ video.video_id }}/reviews" method="POST"> -->
-  <p>
+<h2 class="left_margin">Rank this video</h2>
+<form class="left_margin" action="/get_connected/<video_id>/reviews" method="POST">
+  <p class="left_margin">
     Ranking:
     <select name="ranking">
       <option value="">Select ranking (ZERO is THE BEST! 10 is THE WORST!)</option>
@@ -24,9 +23,8 @@
       {% endfor %}
     </select>
   </p>
-  <p><input type="submit"></p>
+  <p class="left_margin"><input type="submit"></p>
 </form>
 {% endif %}
 
-<!-- <img src=" video.creator "> -->
 {% endblock %}

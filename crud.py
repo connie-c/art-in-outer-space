@@ -87,10 +87,10 @@ def get_video_by_id(video_id):
     return Video.query.get(video_id)
 
 
-def create_review(user, video, ranking):
+def create_review(user, video_id, ranking):
     """Create a new ranking and add to the database."""
 
-    ranking = Review(user=user, video=video, ranking=ranking)
+    ranking = Review(user=user, video_id=video_id, ranking=ranking)
 
     db.session.add(ranking)
     db.session.commit()

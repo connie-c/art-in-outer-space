@@ -2,17 +2,28 @@
 {% block title %}Art in Outer Space Home{% endblock %}
 
 {% block body %}
-  <h1>Welcome Magical Artist Earthlings!</h1>
+  <h1 class="left_margin">Welcome Magical Artist Earthlings!</h1>
+  
+  <div class="hide-on-print" data-reactid="250"><video src="https://d2r55xnwy6nx47.cloudfront.net/uploads/2021/07/Time-Crystals_2560_Lede.mp4" autoplay="autoplay" muted="true" loop="true" playsinline="true" width="100%" poster="https://d2r55xnwy6nx47.cloudfront.net/uploads/2021/07/Time-Crystals_Lede_Still.jpg"></video></div>
 
-  <h2>Navigation</h2>
-  <ul>
-    <li><a href="/get_connected">GET CONNECTED! View all videos of Dear Moon Round 3 Applicants!</a></li>
-    <li><a href="/get_inspired">GET INSPIRED! ARTS EDUCATION! View art in outer space projects! </a></li>
-    <!-- <li><a href="/users">View all users</a></li> -->
-  </ul>
+  <h2>Artist Friends, Log in here:</h2>
+  <form class="white-panel" id="login-form-container" action="/login" method="POST">
+    <p>
+      Email <input type="text" name="email">
+    </p>
 
-  <h2>Create an Account</h2>
-  <form action="/users" method="POST">
+    <p>
+      Password <input type="password" name="password">
+    </p>
+
+    <p>
+      <input type="submit">
+    </p>
+  </form>
+
+  <h2 class="right-text-align">Don't Have an Account? </h2>
+  <div class="right-text-align"> Join the outer space art club! </div>
+  <form class="right-text-align" id="create-account-form-container" action="/users" method="POST">
     <p>
       First Name <input type="text" name="fname">
     </p>
@@ -34,19 +45,12 @@
     </p>
   </form>
 
-  <h2>Log In</h2>
-  <form action="/login" method="POST">
-    <p>
-      Email <input type="text" name="email">
-    </p>
+  <h2>Time to explore!</h2>
+  <ul class="no-bullets">
+    <a href="/get_connected">GET CONNECTED!</a>
+    <a href="/get_inspired">GET INSPIRED!! </a>
+    <a href="/get_funded">GET FUNDED! </a>
+  </ul>
 
-    <p>
-      Password <input type="password" name="password">
-    </p>
-
-    <p>
-      <input type="submit">
-    </p>
-  </form>
-
+  
 {% endblock %}
