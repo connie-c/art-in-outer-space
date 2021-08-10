@@ -1,3 +1,31 @@
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0em;
+  text-transform: none;
+  color: #38383b;
+  background-color: rgb(255, 255, 255);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-link {
+  display: block;
+  padding: .5rem 1rem;
+  color: #ff00c7;
+  text-decoration: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+a {
+  color: ff00c7;
+  text-decoration: underline;
+}
+
 .right-text-align {
   text-align:right;
 }
@@ -13,8 +41,13 @@ ul.no-bullets {
   margin-left: 25px;
 }
 
+.image-credit {
+  font-size: .625rem;
+  text-align: right;
+}
+
 .c-showSP {
-  height: 2000px;
+  height: 500px;
   margin-left: 50px;
 }
 
@@ -42,13 +75,13 @@ ul.no-bullets {
 
 .loading-box img {
    display: block;
-   max-height: 100px;
+   max-height: 500px;
    margin: auto;
    animation: pulse 1s infinite;
 }
 
 .loading-box div {
-  font-size: 20px;
+  font-size: 100px;
   font-family: cursive;
 }
 
@@ -65,11 +98,12 @@ ul.no-bullets {
 }
 
 #image-container {
-  background: url("http://printmeposter.com/blog/wp-content/uploads/2016/10/A-NASA-Poster.jpg");
+  background: url("https://lh3.googleusercontent.com/-bIB7iP0e_BE/YQ5sqLAvI9I/AAAAAAAAAes/bes-Uq1cITAbbJ2XlJWjv3J8AVsxLsosQCNcBGAsYHQ/w640-h360/IMG_9978.heic");
   display: flex;
   justify-content: center;
-  background-size: cover;
   min-height: flex;
+  color: #0ee229;
+  background-color: #1a1a1c;
 }
 #form-container {
   display: flex;
@@ -119,4 +153,130 @@ ul.no-bullets {
   text-align:right;
 }
 
+example_f {
+  border-radius: 4px;
+  background: linear-gradient(to right, #67b26b, #4ca2cb) !important;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.4s;
+  cursor: pointer;
+  margin: 5px;
+}
+.example_f span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+}
+.example_f span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.example_f:hover span {
+  padding-right: 25px;
+}
+.example_f:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 
+.h1, h1 {
+  font-size: calc(1.375rem + 1.5vw);
+  margin-left: 25px;
+}
+
+.funded-body {
+  margin: 0;
+  font-family: "Titillium Web";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #e6e9ec;
+  background-color: #191b1c;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  appearance: auto;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+  box-sizing: border-box;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  padding: 8px 0;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #DB0A40;
+  margin: 10px auto 0;
+  max-width: 216px;
+  font-family: sofia-pro,sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: -0.22px;
+  line-height: 20px;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #0ee229;
+}
+
+.main-visual {
+  flex
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-left: 25;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 960px)
+footer {
+    padding: 1em 1em 3em;
+}
+
+footer {
+  position: relative;
+  padding: 1em;
+  background: white;
+}
+* {
+  outline: none;
+}
+
+footer {
+  display: block;
+}

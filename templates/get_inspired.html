@@ -2,18 +2,22 @@
 {% block title %}All Art in Outer Space Projects{% endblock %}
 
 {% block body %}
-  <h1>GET INSPIRED! View Art in Outer Space Projects!</h1>
+  <h1 class="left_margin">GET INSPIRED! View Art in Outer Space Projects!</h1>
 
-  <ul>
+  <ul class="no-bullets">
     {% for project in projects %}
+    <div>
       <li>
-        <a href="/get_inspired/{{ project.project_id }}">
-            {{ project.project_title }}
-        </a>
         <p>
-        <img src="{{ project.img }}" width=50% height=auto>
+        <img src="{{ project.img }}" width=80% height=auto>
         </p>
+        <p>
+        <a href="/get_inspired/{{ project.project_id }}">
+          {{ project.project_title }}
+      </a>
+    </p>
       </li>
+    </div>
     {% endfor %}
   </ul>
 {% endblock %}

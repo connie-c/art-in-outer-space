@@ -1,41 +1,41 @@
 Artpieces = [
     {
         "artpiece_id": "001",
-        "name": "Chevy 1977 van Ophelia on the Moon", 
+        "name": "Send this Chevy 1977 van Ophelia to the Moon", 
         "price": "200",
-        "image_url": "https://lh3.googleusercontent.com/-6xpUke0A_9w/YOx9txe6ZdI/AAAAAAAAAZ8/Z2bdq6JdWXgnbSlzTIe2jkJbH4-6R-VMACNcBGAsYHQ/w640-h480/D50E9725-AE0E-41BD-9DBA-0B6ECEB9E646_1_105_c.jpeg",
+        "image_url": "https://lh3.googleusercontent.com/-NGTIE6Xi9wo/YQVS2BF5fKI/AAAAAAAAAeE/FdFQwZd1I5gD2khNKePbMM7K61BrX79LgCNcBGAsYHQ/IMG_9723.JPG",
         "color": "none"
     },
 
     {
         "artpiece_id": "002",
-        "name": "Live Opera Performance Screening on Mars", 
+        "name": "Host this Two Piece Jazz Band to Outer Space", 
         "price": "500",
-        "image_url": "https://lh3.googleusercontent.com/-q-xX3knFcCk/YOx94MsewpI/AAAAAAAAAaA/uSeF4yPe07kfPS5pRZQLS_FiNH8CZcQeQCNcBGAsYHQ/w480-h640/D720DA2B-B7A2-45A1-BBA4-513876C2DA76_1_105_c.jpeg",
+        "image_url": "https://lh3.googleusercontent.com/-QLzJabMTYKw/YQVS2FIzmKI/AAAAAAAAAeI/WdGesVL6p4YP4zBuRsd_E1fstuXU6fdRwCNcBGAsYHQ/w563-h640/IMG_9720.JPG",
         "color": "none"
     },
 
         {
         "artpiece_id": "003",
-        "name": "Shoot This Hot Sauce in a Tiny Rocket with a GoPro Strapped to splatter on the Planet Mercury", 
+        "name": "Screen Hackers the 1995 Film in Outer Space", 
         "price": "500",
-        "image_url": "https://lh3.googleusercontent.com/-esZzlUQPGPw/YOx-bvOXjbI/AAAAAAAAAaU/_BrAdQZurT0vjBvFyYQm659rIsQalfmmACNcBGAsYHQ/w480-h640/IMG_5839.jpeg",
+        "image_url": "https://lh3.googleusercontent.com/-w3mptIWZ67s/YQVS3fx_MjI/AAAAAAAAAeM/73qLU1p8aUYYhDhwfJL9yJn9ka2sj9eyQCNcBGAsYHQ/IMG_9728.JPG",
         "color": "none"
     },
 
         {
         "artpiece_id": "004",
-        "name": "Create a gigantic soap bubble on Mars!", 
+        "name": "Send Martha Stewart and Snoop Dog for a new Netflix cooking series out in the Cosmos!", 
         "price": "500",
-        "image_url": "https://lh3.googleusercontent.com/-fy7MCIfXb6I/YOx_p1eJVHI/AAAAAAAAAao/kNGaJYxVut83sl1_1R4ZTjxVyOqV98xQACNcBGAsYHQ/w480-h640/A2E75290-DD58-4305-88EC-CA184EBF9696.jpeg",
+        "image_url": "https://lh3.googleusercontent.com/-XHgmnH3lMSE/YQ5ssBVlhoI/AAAAAAAAAe0/XZv8nAeM8cADTXkrZ-wH1qUUg9EMGQzWgCNcBGAsYHQ/w563-h640/IMG_9980.heic",
         "color": "none"
     },
 
         {
         "artpiece_id": "005",
-        "name": "Send a ballerina in a beautiful pepperoni tutu to dance on Mars", 
+        "name": "Send this SF Ballet Ballerina in a Pepperoni Tutu to Dance on Mars", 
         "price": "500",
-        "image_url": "https://lh3.googleusercontent.com/-JoVQ__tSln4/YOyA2l-c9zI/AAAAAAAAAbA/n19LGp-NQzEWCjkhiL9LjpQgUqumS_UZwCNcBGAsYHQ/w640-h360/IMG_5704.PNG",
+        "image_url": "https://lh3.googleusercontent.com/-pqVkp6Hr-E8/YQVS2ETi2bI/AAAAAAAAAd8/dQKyAFxH-SAZmwA1BA4NCgi2ua-atOcfgCNcBGAsYHQ/IMG_9726.JPG",
         "color": "none"
     },
 
@@ -49,9 +49,9 @@ Artpieces = [
 
         {
         "artpiece_id": "007",
-        "name": "Tie Dye Fashion Clothing Line for Astronauts headed to Mars", 
+        "name": "Host Ashley Olsen's Boyfriend's paintings on the planet Mercury", 
         "price": "500",
-        "image_url": "https://lh3.googleusercontent.com/-ub9z1Xvmh3g/YOyBdAj-DDI/AAAAAAAAAbI/wwb3fG5gfhgOQbnScu1r7NUglB0tORypgCNcBGAsYHQ/w640-h480/IMG_3696.jpeg",
+        "image_url": "https://lh3.googleusercontent.com/-B7hMGAikumQ/YQ5sqKGFHjI/AAAAAAAAAeo/UYVggNcf_fMdFRZf-16i7sLhxKG8VBiYQCNcBGAsYHQ/w640-h640/IMG_9975.heic",
         "color": "none"
     },
 
@@ -77,7 +77,31 @@ Artpieces = [
         "price": "500",
         "image_url": "https://lh3.googleusercontent.com/-ljqXYXXZx3A/YOyDXbN0_qI/AAAAAAAAAcY/AxRIhVKmreMG1FTXY41dngUxLqhEdm0rACNcBGAsYHQ/w640-h480/IMG_2232.jpeg",
         "color": "none"
-    }
+    },
+
+    {
+        "artpiece_id": "011",
+        "name": "Create a gigantic soap bubble on Mars!", 
+        "price": "500",
+        "image_url": "https://lh3.googleusercontent.com/-fy7MCIfXb6I/YOx_p1eJVHI/AAAAAAAAAao/kNGaJYxVut83sl1_1R4ZTjxVyOqV98xQACNcBGAsYHQ/w480-h640/A2E75290-DD58-4305-88EC-CA184EBF9696.jpeg",
+        "color": "none"
+    },
+
+    {
+        "artpiece_id": "012",
+        "name": "Fund the Kiko Codes Coffee Table Book on Jupiter!", 
+        "price": "500",
+        "image_url": "https://lh3.googleusercontent.com/-pWHBfnZ7ik4/YQ5ssGYiwAI/AAAAAAAAAew/3kUSTCS0vG8c-hba_2wVwekPaBWxO7VLwCNcBGAsYHQ/w640-h420/IMG_9973.heic",
+        "color": "none"
+    },
+
+    {
+        "artpiece_id": "013",
+        "name": "Tie Dye Fashion Clothing Line for Astronauts headed to Mars", 
+        "price": "500",
+        "image_url": "https://lh3.googleusercontent.com/-ub9z1Xvmh3g/YOyBdAj-DDI/AAAAAAAAAbI/wwb3fG5gfhgOQbnScu1r7NUglB0tORypgCNcBGAsYHQ/w640-h480/IMG_3696.jpeg",
+        "color": "none"
+    },
 ]
 
 # chev	Chevy 1977 van Ophelia on the Moon	2	https://lh3.googleusercontent.com/-6xpUke0A_9w/YOx9txe6ZdI/AAAAAAAAAZ8/Z2bdq6JdWXgnbSlzTIe2jkJbH4-6R-VMACNcBGAsYHQ/w640-h480/D50E9725-AE0E-41BD-9DBA-0B6ECEB9E646_1_105_c.jpeg	green	t	1

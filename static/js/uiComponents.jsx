@@ -3,7 +3,7 @@ function Homepage(props) {
     <div id="home-banner" className="row">
       <div className="col">
         <h1>Art in Outer Space</h1>
-        <p className="lead">Art pieces in outer space to fund.</p>
+        <p className="lead">The ABSOLUTE FIRST EVER PLACE ONLINE FOR BILLIONAIRE ELITES to FUND AVANT-GARDE ART in OUTER SPACE.</p>
       </div>
     </div>
   );
@@ -59,7 +59,7 @@ function FundingCartPage(props) {
       <tr key={artpieceId}>
         <td>{currentArtpiece.name}</td>
         <td>{cart[artpieceId]}</td>
-        <td>${artpieceCost.toFixed(2)}</td>
+        <td>${artpieceCost.toFixed(2)} BITCOINS</td>
       </tr>
     );
   }
@@ -76,7 +76,7 @@ function FundingCartPage(props) {
           </thead>
           <tbody>{tableData}</tbody>
         </table>
-        <p className="lead">Total: ${totalCost.toFixed(2)}</p>
+        <p className="lead">Total: ${totalCost.toFixed(2)} BITCOINS</p>
       </div>
     </PageContainer>
   );
@@ -118,14 +118,14 @@ function ArtpieceCard(props) {
       </ReactRouterDOM.Link>
       <div className="card-body">
         <h5 className="card-title">
-          <ReactRouterDOM.Link to={`/fund/${id}`}>{name}</ReactRouterDOM.Link>
+          <ReactRouterDOM.Link to={`/fund/${id} BITCOINS`}>{name}</ReactRouterDOM.Link>
         </h5>
       </div>
       <div className="card-body pt-0 container-fluid">
         <div className="row">
           <div className="col-12 col-lg-6">
             <span className="lead price d-inline-block">
-              ${price.toFixed(2)}
+              ${price.toFixed(2)} BITCOINS
             </span>
           </div>
           <div className="col-12 col-lg-6">
@@ -133,7 +133,7 @@ function ArtpieceCard(props) {
               className="btn btn-sm btn-success d-inline-block"
               onClick={() => handleAddToCart(id)}
             >
-              Add to cart
+              FULLY FUND
             </button>
           </div>
         </div>
@@ -145,8 +145,8 @@ function ArtpieceCard(props) {
 function Loading() {
   return (
     <div className="loading-box">
-      <img src="static/img/artpiece-loading.jpg" alt="" />
-      <div>Loading...</div>
+      <img src="https://lh3.googleusercontent.com/-2Gnwevre-pY/YQ6D9v0I9eI/AAAAAAAAAfQ/M-nmBdDU5uctEiKVvMjfq-PJPXMb4hi7QCNcBGAsYHQ/w640-h320/artpiece-loading.jpg"/>
+      <div>3...2...1...BLAST OFF!!!!!</div>
     </div>
   );
 }
